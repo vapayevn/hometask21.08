@@ -1,0 +1,130 @@
+.checkbox {
+    width:30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #0e4bf1;
+    appearance: none;
+    border-radius: 2px;
+  }
+  
+  .checkbox::after {
+    content: "";
+    padding-top: 15px;
+    display: block;
+    width: 20px;
+    height: 0px;
+    border-left: 2px solid rgb(253, 253, 253);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transform: rotate(-45deg) scale(0);
+    margin: auto;
+    transition: all 0.2s ease;
+  }
+  
+  .checkbox:checked::after {
+    transform: rotate(-45deg) scale(1);
+  }
+  
+  .switch {
+    width: 50px;
+    height: 25px;
+    background-color: rgb(1, 1, 41);
+    appearance: none;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    position: relative;
+    transition: 0.3s linear;
+  }
+  
+  .switch::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s linear;
+  }
+  
+  .switch:checked::before {
+    margin-left: calc(50px - 32px);
+    background-color: rgb(1, 1, 41);
+  }
+  
+  .switch:checked {
+    background-color: white;
+    border: 1px solid lightgray;
+  }
+  @media (max-width: 768px) {
+    .nav_bar {
+      width: 200px;
+    }
+  
+    .nav_right {
+      margin-left: 200px;
+    }
+  
+    .header {
+      width: calc(100% - 200px);
+    }
+  
+    .menu_sreach {
+      width: 100%;
+    }
+  
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  
+
+
+@media (max-width: 480px) {
+    .nav_bar {
+      width: 60px;
+    }
+  
+    .nav_right {
+      margin-left: 60px;
+      width: calc(100% - 60px);
+    }
+  
+    .header {
+      width: calc(100% - 60px);
+    }
+  
+    .menu_sreach {
+      width: calc(100% - 60px);
+    }
+  
+    .menu p {
+      display: none; 
+    }
+  
+    .dashboard {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .dashboard div {
+      margin-bottom: 10px;
+    }
+  
+    .menu_profill {
+      display: none;
+    }
+  
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
